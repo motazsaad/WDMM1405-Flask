@@ -26,6 +26,7 @@ def hello_world():
 # method 1 to get parameter
 @app.route('/hello/<name>')
 def hello_name(name):
+    # to call /hello/Ahmed
     return 'Hello {}!'.format(name)
 
 
@@ -33,6 +34,7 @@ def hello_name(name):
 @app.route('/greeting')
 def greet_name():
     name = request.args.get('name')
+    # to call /greeting?name="Ahmed"
     return 'Hello {}!'.format(name)
 
 
@@ -40,13 +42,21 @@ def greet_name():
 @app.route('/post/<int:post_id>')
 def show_post(post_id):
     # show the post with the given id, the id is an integer
+    # to call /post/10
     return 'Post %d' % post_id
 
 
 @app.route('/hello2')
-@app.route('/hello2/<name>')
-def hello2(name=None):
-    return render_template('hello_template.html', name=name)
+def hello2():
+    name = request.args.get('name')
+    return render_template('hello.html', name=name)
+
+
+@app.route('/sum')
+def add():
+    x = request.args.get('x')
+    y = request.args.get('y')
+    return 'the sum of {} and {} is {}'.format(x, y, int(x) + int(y))
 
 
 if __name__ == '__main__':

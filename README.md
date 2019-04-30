@@ -21,3 +21,17 @@ Setting up a basic project structure then developing a static site, styled with 
 
 ## get the bootstrap
 https://getbootstrap.com/ 
+
+
+## HTTP messages code
+
+* 200 OK 
+* 404 not found 
+* 500 server error  
+
+
+
+
+## References 
+
+https://github.com/realpython/discover-flask

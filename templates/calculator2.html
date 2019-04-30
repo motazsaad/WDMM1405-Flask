@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+<h1>The calculator</h1>
+<br>
+
+<form action="" method="post">
+    <input type="text" placeholder="First Number" name="num1" value="{{ request.form.num1 }}">
+    <select name="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" placeholder="Second Number" name="num2" value="{{ request.form.num2 }}">
+    <input class="btn btn-default" type="submit" value="Calculate">
+</form>
+
+<br>
+
+<strong> Result: {{ n1 }} {{ op }} {{ n2 }} = {{ result }} </strong>
+</body>
+</html>
