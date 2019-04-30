@@ -30,7 +30,6 @@ def calculator():
                 op = request.form['op']
                 print(n1, op, n2)
                 result = eval('{}{}{}'.format(n1, op, n2))
-                result = '{} {} {} = {}'
                 print(result)
             except BaseException as error:
                 result = 'error: {}'.format(error)
@@ -40,23 +39,23 @@ def calculator():
 
 @app.route('/calculator2', methods=['GET', 'POST'])
 def calculator2():
-    result = None
+    result = ''
+    n1 = ''
+    n2 = ''
+    op = ''
     if request.method == 'POST':
-        if not request.form['num1'] and not request.form['num2'] \
-                and not request.form['op']:
-            result = 'please fil the form'
-            print(result)
-        else:
+        n1 = request.form['num1']
+        n2 = request.form['num2']
+        op = request.form['op']
+        if n1 and n2:
             try:
-                n1 = request.form['num1']
-                n2 = request.form['num2']
-                op = request.form['op']
-                print(n1, op, n2)
                 result = eval('{}{}{}'.format(n1, op, n2))
                 print(result)
             except BaseException as error:
                 result = 'error: {}'.format(error)
                 print(result)
+        else:
+            result = 'please fill the form'
     return render_template('calculator2.html', n1=n1, op=op, n2=n2, result=result)
 
 
