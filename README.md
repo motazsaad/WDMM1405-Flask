@@ -22,6 +22,15 @@ Setting up a basic project structure then developing a static site, styled with 
 ## get the bootstrap
 https://getbootstrap.com/ 
 
+Take the following files 
+
+* bootstrap.min.css
+* bootstrap.min.js   
+
+### advantage 
+
+* Makes your website responsive
+* improve the style of your website  
 
 ## HTTP messages code
 
