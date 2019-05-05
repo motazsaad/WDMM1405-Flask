@@ -1,0 +1,17 @@
+{% extends "word_master.html" %}
+{% block content %}
+    {% if counts %}
+        <table>
+            <tr>
+                <th>Word</th>
+                <th>Frequency</th>
+            </tr>
+            {% for word, freq in counts.items() %}
+                <tr>
+                    <td>{{ word }}</td>
+                    <td>{{ freq }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+{% endblock %}

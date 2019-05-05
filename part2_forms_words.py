@@ -26,5 +26,20 @@ def mostfreq():
     return render_template('words.html', op=op, result=result)
 
 
+@app.route('/mostfreqtable', methods=['GET', 'POST'])
+def mostfreqtable():
+    counts = {}
+    if request.method == 'POST':
+        text = request.form['mytext']
+        if not text:
+            result = 'please fil the form'
+            print(result)
+        else:
+            for word in text.split():
+                counts[word] = counts.get(word, 0) + 1
+
+    return render_template('words2.html', counts=counts)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
