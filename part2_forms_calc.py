@@ -17,24 +17,25 @@ def sum_numbers():
 
 @app.route('/calculator', methods=['GET', 'POST'])
 def calculator():
+    l = 'this is my calculator'.split()
     result = None
     if request.method == 'POST':
         if not request.form['num1'] and not request.form['num2'] \
                 and not request.form['op']:
             result = 'please fil the form'
-            print(result)
+            # print(result)
         else:
             try:
                 n1 = request.form['num1']
                 n2 = request.form['num2']
                 op = request.form['op']
-                print(n1, op, n2)
+                # print(n1, op, n2)
                 result = eval('{}{}{}'.format(n1, op, n2))
-                print(result)
+                # print(result)
             except BaseException as error:
                 result = 'error: {}'.format(error)
-                print(result)
-    return render_template('calculator.html', result=result)
+                # print(result)
+    return render_template('calculator.html', result=result, l=l)
 
 
 @app.route('/calculator2', methods=['GET', 'POST'])

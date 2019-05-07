@@ -15,9 +15,18 @@
     <input class="btn btn-default" type="submit" value="Calculate">
 </form>
 
+
+
 {% if result %}
     <p class="result"><strong>Result:</strong> {{ result }}</p>
 {% endif %}
+
+
+{% for e in l %}
+    <p>{{ e }}</p>
+    <hr>
+{% endfor %}
+
 
 </body>
 </html>

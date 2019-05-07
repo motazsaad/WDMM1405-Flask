@@ -38,7 +38,10 @@ Take the following files
 * 404 not found 
 * 500 server error  
 
+## HTTP Methds 
 
+* GET: get resource from server 
+* POST: send data to server. Usually used with html forms 
 
 
 ## References 
