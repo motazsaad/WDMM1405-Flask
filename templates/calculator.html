@@ -15,7 +15,9 @@
     <input class="btn btn-default" type="submit" value="Calculate">
 </form>
 
-
+{#{% if x > 10 %}#}
+{#    <p>{{ x }}</p>#}
+{#{% endif %}#}
 
 {% if result %}
     <p class="result"><strong>Result:</strong> {{ result }}</p>
@@ -23,7 +25,7 @@
 
 
 {% for e in l %}
-    <p>{{ e }}</p>
+    <p> {{ e }} </p>
     <hr>
 {% endfor %}
 

@@ -18,7 +18,7 @@ def sum_numbers():
 @app.route('/calculator', methods=['GET', 'POST'])
 def calculator():
     l = 'this is my calculator'.split()
-    result = None
+    result = None  # when the method is GET
     if request.method == 'POST':
         if not request.form['num1'] and not request.form['num2'] \
                 and not request.form['op']:

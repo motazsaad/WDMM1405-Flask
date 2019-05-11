@@ -16,7 +16,7 @@ def mostfreq():
         text = request.form['mytext']
         if not text:
             result = 'please fil the form'
-            print(result)
+            # print(result)
         else:
             counts = {}
             for word in text.split():
@@ -32,7 +32,7 @@ def mostfreqtable():
     if request.method == 'POST':
         text = request.form['mytext']
         if not text:
-            result = 'please fil the form'
+            result = 'please fill the form'
             print(result)
         else:
             for word in text.split():

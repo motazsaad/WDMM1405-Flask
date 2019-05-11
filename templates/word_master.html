@@ -10,7 +10,7 @@
 
 <form action="" method="post">
     <textarea name="mytext" rows="10" cols="30">
-Please enter your text here
+{{ request.form['mytext'] }}
 </textarea>
     <input class="btn btn-default" type="submit" value="Count">
 </form>
@@ -18,6 +18,8 @@ Please enter your text here
 <div class="container">
     {% block content %}{% endblock %}
 </div>
+
+<p> thanks for your visit </p>
 
 </body>
 </html>

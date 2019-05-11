@@ -9,8 +9,8 @@
 <br>
 
 <form action="" method="post">
-    <textarea name="mytext" rows="10" cols="30">
-Please enter your text here
+<textarea name="mytext" rows="10" cols="30">
+    {{ request.form['mytext'] }}
 </textarea>
     <input class="btn btn-default" type="submit" value="Count">
 </form>
@@ -18,5 +18,12 @@ Please enter your text here
 <br>
 
 <strong> Result: {{ op }}, {{ result }} </strong>
+
+{# statment : for, if while, ..... #}
+{% for i in range(10) %}
+    {#    variable#}
+    <p> {{ i }}</p>
+{% endfor %}
+
 </body>
 </html>

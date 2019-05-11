@@ -38,12 +38,15 @@ Take the following files
 * 404 not found 
 * 500 server error  
 
-## HTTP Methds 
+## HTTP Metohds 
 
 * GET: get resource from server 
 * POST: send data to server. Usually used with html forms 
 
+---
+# Mater template (template inheritance)
 
+design master template and reuse it 
 ## References 
 
 https://github.com/realpython/discover-flask

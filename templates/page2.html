@@ -1,0 +1,18 @@
+{% extends "master_page.html" %}
+{% block content %}
+
+    <h3>welcome to page 2</h3>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Value</th>
+        </tr>
+        {% for i in range(8) %}
+            <tr>
+                <td>{{ i }}</td>
+                <td>{{ mylist[i] }}</td>
+            </tr>
+
+        {% endfor %}
+    </table>
+{% endblock %}
