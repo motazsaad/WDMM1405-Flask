@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My cool calculator</title>
+</head>
+<body>
+
+<form action="" method="post">
+    <input type="text" placeholder="1st number" name="num1">
+    <input type="text" placeholder="Operator" name="op">
+    <input type="text" placeholder="2nd number" name="num2">
+    <input type="submit" value="calculate">
+
+
+</form>
+
+
+{% if result %}
+    <p><strong>result = {{ result }} </strong></p>
+{% endif %}
+
+</body>
+</html>

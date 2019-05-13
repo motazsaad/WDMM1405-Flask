@@ -38,15 +38,24 @@ Take the following files
 * 404 not found 
 * 500 server error  
 
-## HTTP Metohds 
+## HTTP Methods 
 
-* GET: get resource from server 
+* GET: get resource from server (html page, jpg image, pdf file, ...etc) 
 * POST: send data to server. Usually used with html forms 
 
 ---
 # Mater template (template inheritance)
 
-design master template and reuse it 
+design master template and reuse it
+
+## SQLite 
+
+retrieve date from a single table
+
+### Tool
+Sqlite Browser
+
+ 
 ## References 
 
 https://github.com/realpython/discover-flask

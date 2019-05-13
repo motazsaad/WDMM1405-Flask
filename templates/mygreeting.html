@@ -1,0 +1,12 @@
+{% extends "master_0002.html" %}
+{% block content %}
+    <form action="" method="post">
+        <input type="text" placeholder="Enter your name" name="std_name">
+        <input type="submit" value="say hello">
+    </form>
+
+    {% if message %}
+        <h4>{{ message }}</h4>
+    {% endif %}
+
+{% endblock %}

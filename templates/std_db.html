@@ -1,0 +1,19 @@
+{% extends "master_0002.html" %}
+{% block content %}
+    <h1>List of students</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        {% for std_id, name, dept in rows %}
+            <tr>
+                <td>{{ std_id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ dept }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
