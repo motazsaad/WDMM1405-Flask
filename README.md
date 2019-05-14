@@ -48,12 +48,22 @@ Take the following files
 
 design master template and reuse it
 
-## SQLite 
+---
+
+## Deal with Databases (SQLite) 
 
 retrieve date from a single table
 
 ### Tool
 Sqlite Browser
+
+---
+
+## Build REST API using Python and Flask 
+
+* Option 1: Basic Flask 
+* Option 2: Flask-RESTful (pip install Flask-RESTful)
+
 
  
 ## References 

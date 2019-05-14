@@ -1,0 +1,39 @@
+{% extends "master_0002.html" %}
+
+{% block content %}
+
+    <p> write a Flask app that takes a text in a web form and count the words and render the counts in a table in html
+        template</p>
+    <div dir="rtl" align="right">
+        <p>اكتب تطبيق فلاسك يأخذ من المستخدم نص من خلال نموذج ويب ويقوم بعد الكلمات وعرض الكلمة وتكرارها على شكل جدول في
+            قالب ويب </p>
+    </div>
+
+    <form method="post" action="">
+    <textarea name="mytext" rows="10" cols="50"
+              placeholder="enter your text here and I will count">{{ request.form['mytext'] }}
+    </textarea>
+        <input type="submit" value="count words">
+
+    </form>
+
+    {% if counts %}
+        <table>
+            <tr>
+                <th>Word</th>
+                <th>Count</th>
+            </tr>
+            {% for word, freq in counts.items() %}
+                <tr>
+                    <td>{{ word }}</td>
+                    <td>{{ freq }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+        <h3>most frequent word: {{ most_freq }}</h3>
+
+    {% endif %}
+
+{% endblock %}
