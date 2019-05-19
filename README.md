@@ -51,6 +51,11 @@ design master template and reuse it
 ---
 
 ## Deal with Databases (SQLite) 
+SQL: Structured Query Language
+
+Lite == Light ==  
+
+Database: set of related tables 
 
 retrieve date from a single table
 
@@ -61,7 +66,18 @@ Sqlite Browser
 
 ## Build REST API using Python and Flask 
 
-* Option 1: Basic Flask 
+API = Application Program Interface
+
+Developers use API to build applications
+
+Common Example: The weather App
+
+Ordinary Flask app pages return a string or html. There is a need for standard format to extract result from it. It is JSON format
+
+JSON == JAVA Simple Object Notation == Python Dictionary      
+
+### Options 
+* Option 1: Basic Flask (Jsonify function) 
 * Option 2: Flask-RESTful (pip install Flask-RESTful)
 
 
